@@ -5,8 +5,8 @@ def main():
     
     table = {"forward":0,"down":0,"up":0}
     for val in data:
-      pair = val.split()
-      table[pair[0]] += int(pair[1])
+      direction, value = val.split()
+      table[direction] += int(value)
 
     print(table)
     print(table["forward"]*(table["down"]-table["up"]))
